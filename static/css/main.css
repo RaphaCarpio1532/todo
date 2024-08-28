@@ -1,0 +1,68 @@
+html, body {
+	padding: 0px;
+	margin: 5%;
+}
+
+body {
+	position: relative;
+	background-color: #151515;
+	line-height: 1.7;
+	font-size: 19px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	color: #EEEEEE;
+	overflow-x: hidden;
+}
+
+p { 
+	margin: 0 0 30px; 
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+	outline: none
+}
+a:hover, a:focus {
+	color: currentColor;
+}
+p a { 
+	color: currentColor;
+	opacity: .7;
+	font-style: italic;
+	border-bottom: 1px solid;
+}
+p a:hover,
+p a:focus { 
+	color: currentColor;
+	opacity: .6;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+b, strong {
+	font-weight: bold;
+	font-weight: 700;
+}
+
+section { 
+	position: relative; 
+}
+
+td {
+	text-align: center;
+	padding: 5px;
+}
+
+.form {
+	margin-top: 20px;
+}
+
+#content {
+
+	width: 70%;
+
+}

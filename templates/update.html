@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rapha Carpio - Database Administrator | SQL Developer </title>
+<h1 style="position: relative;">COSAS QUE DEBO HACER</h1>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="align-content: center;"> UPDATE TASK </h1>
+
+
+    <form action="/update/"{{task.id}} method="POST">
+        <input type ="text" name="content" id="content" value="{{task.content}}">
+        <input type ="submit" value="Update">
+    </form>
+
+</div>
+{% endblock %}
