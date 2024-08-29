@@ -22,7 +22,7 @@ class Todo(db.Model):
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        task_content = request.form['content']
+        task_content = request.form['content'].lower()
         new_task = Todo(content=task_content)
 
         try:
@@ -34,7 +34,7 @@ def index():
             return 'There was an issue adding your task'
 
     else:
-        tasks = Todo.query.order_by(Todo.date_created).all()
+        tasks = Todo.query.order_by(Todo.date_created.desc()).all()
         return render_template('index.html', tasks= tasks)
 
 @app.route('/delete/<int:id>')
@@ -56,7 +56,7 @@ def update(id):
     task = Todo.query.get_or_404(id)
 
     if request.method == 'POST':
-        task.content = request.form['content']
+        task.content = request.form['content'].lower()
 
         try:
             db.session.commit()
